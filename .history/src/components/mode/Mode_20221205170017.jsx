@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setHardMode } from "../../features/hardModeSlice";
 import { setChoices } from "../../features/choicesSlice";
-
+import { setGrid } from "../../features/choicesSlice";
 
 export default function Mode() {
   const hardMode = useSelector((state) => state.hardMode.value);
@@ -12,12 +12,11 @@ export default function Mode() {
   //sets Choices state when user changes game to hard mode.
   useEffect(() => {
     dispatch(setChoices(hardMode));
-  
   }, [dispatch, hardMode]);
 
   const handleChange = () => {
     dispatch(setHardMode(hardMode));
-    
+    setGrid();
   };
 
   return (

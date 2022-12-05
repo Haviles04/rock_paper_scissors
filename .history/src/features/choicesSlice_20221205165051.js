@@ -46,7 +46,7 @@ export const choicesSlice = createSlice({
   reducers: {
     setChoices: (state, action) => {
       if (action.payload === true) {
-        const newState = [...initialState.value].concat([
+        state.value = [...initialState.value].concat([
           {
             name: "Lizard",
             beats: ["Spock", "Paper"],
@@ -68,28 +68,26 @@ export const choicesSlice = createSlice({
             row: "2",
           },
         ]);
-
-        return {
-          ...state,
-          value: newState.map((item) => {
-            if (item.name === "Rock") {
-              return { ...item, col: "4", row:"3" };
-            } else if (item.name === "Paper") {
-              return { ...item, col: "5", row:"2" };
-            } else if (item.name === "Scissors") {
-              return { ...item, col: "3", row:"1" };
-            }
-            return item;
-          }),
-        };
       } else {
         state.value = initialState.value;
       }
     },
+    setGrid: (state) => {
+      state.value.map((item) => {
+        if (item.name === "Rock") {
+          return { ...item, col: "4" };
+        } else if (item.name === "Paper") {
+          return { ...item, col: "5" };
+        } else if (item.name === "Scissor") {
+          return { ...item, col: "3" };
+        }
+        return item;
+      });
+    }
+
   },
 });
 
-export const { setGrid } = choicesSlice.actions;
 export const { setChoices } = choicesSlice.actions;
 
 export default choicesSlice.reducer;

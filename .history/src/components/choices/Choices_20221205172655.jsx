@@ -11,7 +11,7 @@ export default function Choices() {
     <div
       className={
         hardMode
-          ? "bg-hard bg-no-repeat bg-center bg-[length:50%] grid grid-cols-5 gap-0 justify-items-center grid-rows-3 w-[375px] h-[500px]"
+          ? "bg-hard bg-no-repeat bg-center bg-[length:50%] grid grid-cols-5 gap-x-[50px] justify-items-center grid-rows-3  h-500px"
           : " bg-easy bg-no-repeat bg-center bg-[length:50%] grid justify-items-center gap-x-[75px] grid-cols-5 grid-rows-2 w-[375px] h-[300px]"
       }
     >

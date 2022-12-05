@@ -69,25 +69,28 @@ export const choicesSlice = createSlice({
           },
         ]);
 
-        return {
-          ...state,
-          value: newState.map((item) => {
-            if (item.name === "Rock") {
-              return { ...item, col: "4", row:"3" };
-            } else if (item.name === "Paper") {
-              return { ...item, col: "5", row:"2" };
-            } else if (item.name === "Scissors") {
-              return { ...item, col: "3", row:"1" };
-            }
-            return item;
-          }),
-        };
+        const newState2 = newState.value.map((item) => {
+          if (item.name === "Rock") {
+            return { ...item, col: "4" };
+          } else if (item.name === "Paper") {
+            return { ...item, col: "5" };
+          } else if (item.name === "Scissor") {
+            return { ...item, col: "3" };
+          }
+          return item;
+        });
+
+        state.value = newState2
+
+        
       } else {
         state.value = initialState.value;
       }
-    },
+    }
+    
+    }
   },
-});
+);
 
 export const { setGrid } = choicesSlice.actions;
 export const { setChoices } = choicesSlice.actions;

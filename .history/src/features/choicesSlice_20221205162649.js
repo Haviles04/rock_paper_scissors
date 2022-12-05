@@ -13,9 +13,9 @@ const initialState = {
       image: iconPaper,
       id: 2,
       shadow: "#4865f4",
-      border: "#5671f5",
-      col: "2",
-      row: "1",
+      border: '#5671f5',
+      col:'2',
+      row:'1'
     },
     {
       name: "Scissors",
@@ -23,9 +23,9 @@ const initialState = {
       image: iconScissors,
       id: 3,
       shadow: "#ec9e0e",
-      border: "#eca922",
-      col: "4",
-      row: "1",
+      border: '#eca922',
+      col: '4',
+      row: '1'
     },
     {
       name: "Rock",
@@ -33,10 +33,10 @@ const initialState = {
       image: iconRock,
       id: 1,
       shadow: "#dc2e4e",
-      border: "#dd405d",
-      col: "3",
-      row: "2",
-    },
+      border: '#dd405d',
+      col: '3',
+      row: '2'
+    }
   ],
 };
 
@@ -46,16 +46,16 @@ export const choicesSlice = createSlice({
   reducers: {
     setChoices: (state, action) => {
       if (action.payload === true) {
-        const newState = [...initialState.value].concat([
+        state.value = [...initialState.value].concat([
           {
             name: "Lizard",
             beats: ["Spock", "Paper"],
             image: iconLizard,
             id: 5,
             shadow: "#834fe3",
-            border: "#8c5de5",
-            col: "2",
-            row: "3",
+            border: '#8c5de5',
+            col: '2',
+            row: '3'
           },
           {
             name: "Spock",
@@ -63,33 +63,33 @@ export const choicesSlice = createSlice({
             image: iconSpock,
             id: 4,
             shadow: "#40b9ce",
-            border: "#52bed1",
-            col: "1",
-            row: "2",
-          },
+            border: '#52bed1',
+            col: '1',
+            row: '2'
+          }
         ]);
 
-        return {
-          ...state,
-          value: newState.map((item) => {
-            if (item.name === "Rock") {
-              return { ...item, col: "4", row:"3" };
-            } else if (item.name === "Paper") {
-              return { ...item, col: "5", row:"2" };
-            } else if (item.name === "Scissors") {
-              return { ...item, col: "3", row:"1" };
-            }
-            return item;
-          }),
-        };
       } else {
         state.value = initialState.value;
-      }
+      };
     },
+    updateGrid: (state, action ) => {
+      return state.map( item => {
+        if(item.name === 'Rock'){
+         return { ...item, col:"4", row:"3" }
+        } else if (item.name === 'Scissors'){
+          return { ...item, col:"3", row:"1"}
+        } else if (item.name === 'Paper'){
+          return {...item, col:"5", row:"2"}
+        } else {
+          return item;
+        }
+      })
+    }
   },
 });
 
-export const { setGrid } = choicesSlice.actions;
+export const { updateGrid } = choicesSlice.actions;
 export const { setChoices } = choicesSlice.actions;
 
 export default choicesSlice.reducer;

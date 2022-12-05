@@ -73,15 +73,18 @@ export const choicesSlice = createSlice({
           ...state,
           value: newState.map((item) => {
             if (item.name === "Rock") {
-              return { ...item, col: "4", row: "3" };
+              return { ...item, col: "4", row:"3" };
             } else if (item.name === "Paper") {
-              return { ...item, col: "5", row: "2" };
+              return { ...item, col: "5", row:"2" };
             } else if (item.name === "Scissors") {
-              return { ...item, col: "3", row: "1" };
+              return { ...item, col: "3", row:"1" };
             }
             return item;
           }),
         };
+
+
+        
       } else {
         state.value = initialState.value;
       }

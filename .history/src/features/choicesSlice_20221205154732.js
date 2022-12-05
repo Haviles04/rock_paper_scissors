@@ -54,8 +54,8 @@ export const choicesSlice = createSlice({
             id: 5,
             shadow: "#834fe3",
             border: '#8c5de5',
-            col: '2',
-            row: '3'
+            col: '1',
+            row: '2'
           },
           {
             name: "Spock",
@@ -64,11 +64,8 @@ export const choicesSlice = createSlice({
             id: 4,
             shadow: "#40b9ce",
             border: '#52bed1',
-            col: '1',
-            row: '2'
           }
         ]);
-        
       } else {
         state.value = initialState.value;
       }

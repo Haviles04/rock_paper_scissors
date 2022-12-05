@@ -12,7 +12,7 @@ const initialState = {
       beats: ["Rock", "Spock"],
       image: iconPaper,
       id: 2,
-      shadow: "#4865f4",
+      shadow: "hsl(230, 89%, 62%)",
       border: '#5671f5',
       col:'2',
       row:'1'
@@ -22,7 +22,7 @@ const initialState = {
       beats: ["Paper", "Lizard"],
       image: iconScissors,
       id: 3,
-      shadow: "#ec9e0e",
+      shadow: "hsl(39, 89%, 49%)",
       border: '#eca922',
       col: '4',
       row: '1'
@@ -32,7 +32,7 @@ const initialState = {
       beats: ["Scissors", "Lizard"],
       image: iconRock,
       id: 1,
-      shadow: "#dc2e4e",
+      shadow: "hsl(349, 71%, 52%)",
       border: '#dd405d',
       col: '3',
       row: '2'
@@ -52,23 +52,18 @@ export const choicesSlice = createSlice({
             beats: ["Spock", "Paper"],
             image: iconLizard,
             id: 5,
-            shadow: "#834fe3",
+            shadow: "hsl(261, 73%, 60%)",
             border: '#8c5de5',
-            col: '2',
-            row: '3'
           },
           {
             name: "Spock",
             beats: ["Scissors", "Rock"],
             image: iconSpock,
             id: 4,
-            shadow: "#40b9ce",
-            border: '#52bed1',
-            col: '1',
-            row: '2'
+            shadow: "hsl(189, 59%, 53%)",
+            border: 'hsl(189, 58%, 57%)',
           }
         ]);
-        
       } else {
         state.value = initialState.value;
       }

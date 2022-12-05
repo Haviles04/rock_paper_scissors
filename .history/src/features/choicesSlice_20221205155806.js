@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import iconRock from "../assets/images/icon-rock.svg";
 import iconPaper from "../assets/images/icon-paper.svg";
 import iconScissors from "../assets/images/icon-scissors.svg";

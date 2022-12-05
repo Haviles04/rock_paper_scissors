@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
 import iconRock from "../assets/images/icon-rock.svg";
 import iconPaper from "../assets/images/icon-paper.svg";
 import iconScissors from "../assets/images/icon-scissors.svg";
 import iconSpock from "../assets/images/icon-spock.svg";
 import iconLizard from "../assets/images/icon-lizard.svg";
+
+const hardMode = useSelector((state) => state.hardMode.value);
 
 const initialState = {
   value: [

@@ -68,7 +68,9 @@ export const choicesSlice = createSlice({
             row: '2'
           }
         ]);
-        
+        state.value.scissors.col = '1';
+        state.value.scissors.row = '1';
+
       } else {
         state.value = initialState.value;
       }

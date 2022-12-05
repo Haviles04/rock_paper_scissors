@@ -7,8 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'easy': "url('assets/images/bg-triangle.svg')",
-        'hard' : "url('assets/images/bg-pentagon.svg')"
+        'easy': "url('assets/images/bg-triangle.svg')"
       },
       colors: {
         'mainBG1': '#1F3756',
@@ -50,7 +49,7 @@ module.exports = {
     'shadow-[0px_8px_#4865f4]',
     'shadow-[0px_8px_#ec9e0e]',
     'shadow-[0px_8px_#dc2e4e]',
-    'shadow-[0px_8px_#834fe3]',
-    'shadow-[0px_8px_#40b9ce]',
+    'shadow-[0px_8px_]',
+    'shadow-[0px_8px_]',
   ]
 }

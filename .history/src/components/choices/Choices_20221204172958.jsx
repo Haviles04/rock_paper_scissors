@@ -11,18 +11,25 @@ export default function Choices() {
     <div
       className={
         hardMode
-          ? "bg-hard bg-no-repeat bg-center bg-[length:50%] grid grid-cols-5 justify-items-center grid-rows-3  h-500px"
+          ? "grid grid-cols-5 justify-items-center grid-rows-3  h-500px"
           : " bg-easy bg-no-repeat bg-center bg-[length:50%] grid justify-items-center gap-x-[75px] grid-cols-5 grid-rows-2 w-[375px] h-[300px]"
       }
     >
       {choices.map((choice) => (
         <div
           key={choice.id}
-          className={`col-start-${choice.col}  row-start-${choice.row} row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`}
+          className={`col-start-${choice.col}  row-start-${choice.row} row m-5 w-[75%] h rounded-full`}
+          style={{
+            boxShadow: `0px 7px ${choice.shadow}`,
+          }}
         >
           
           <button
-            className={`bg-gray-100 flex justify-center items-center w-[115px] h-[115px] p-5 rounded-full shadow-btnInner border-solid border-[10px] border-[${choice.border}]`}
+            className="bg-gray-100 flex justify-center items-center w-[115px] h-[115px] p-5 rounded-full"
+            style={{
+              border: `10px solid ${choice.border}`,
+              boxShadow: "inset 0px 6px lightGrey",
+            }}
           >
             <img alt={choice.name} src={choice.image} />
           </button>

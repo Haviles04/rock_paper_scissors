@@ -11,7 +11,7 @@ export default function Choices() {
     <div
       className={
         hardMode
-          ? "bg-hard bg-no-repeat bg-center bg-[length:50%] grid grid-cols-5 justify-items-center grid-rows-3  h-500px"
+          ? "grid grid-cols-5 justify-items-center grid-rows-3  h-500px"
           : " bg-easy bg-no-repeat bg-center bg-[length:50%] grid justify-items-center gap-x-[75px] grid-cols-5 grid-rows-2 w-[375px] h-[300px]"
       }
     >
@@ -19,6 +19,9 @@ export default function Choices() {
         <div
           key={choice.id}
           className={`col-start-${choice.col}  row-start-${choice.row} row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`}
+          style={{
+            //boxShadow: `0px 8px ${choice.shadow}`,
+          }}
         >
           
           <button

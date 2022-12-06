@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 
 function App() {
   return (
-    <div className="bg-gradient-radial from-mainBG1 to-mainBG2 w-screen h-screen flex flex-col justify-around">
+    <div className="bg-gradient-radial from-mainBG1 to-mainBG2 w-screen h-screen flex flex-col">
       <Header />
       <Choices />
       <Mode />  

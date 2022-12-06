@@ -14,12 +14,21 @@ function App() {
     
     
     <div className="bg-gradient-radial from-mainBG1 to-mainBG2 w-screen h-screen flex flex-col justify-around"> 
-
+      
       <Header />
-      {!playerChoice ? <Choices /> : <Results />}
+      {playerChoice ? 
+      <Results /> 
+      
+      showRules && <Rules /> :
+      
+      
+      <>
+      <Choices />
       {showRules && <Rules />}
       <RulesButton />
-      <Mode />  
+      <Mode /> 
+      </>
+       }
     
     </div>
 

@@ -1,24 +1,26 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { playerSelect } from "../../features/playerChoiceSlice";
-import { compSelect } from "../../features/compChoiceSlice";
+import {compSelect} from '../../features/compChoiceSlice';
 
 export default function Choices() {
   const choices = useSelector((state) => state.choices.value);
   const hardMode = useSelector((state) => state.hardMode.value);
   const dispatch = useDispatch();
+ 
 
   const setComputerChoice = () => {
-    const choiceIndex = hardMode
-      ? Math.floor(Math.random() * 5)
-      : Math.floor(Math.random() * 3);
-    return choices[choiceIndex];
-  };
-
+    const numOfChoices = hardMode ? 5 : 3;
+    return choices[Math.floor(Math.random * numOfChoices)];
+    
+  }
+  
+  
   const handleChange = (choice) => {
     dispatch(playerSelect(choice));
     dispatch(compSelect(setComputerChoice()));
-  };
+  }
+  
 
   return (
     <div className="flex justify-center">
@@ -44,7 +46,7 @@ export default function Choices() {
               } p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${
                 choice.border
               }]`}
-              onClick={() => handleChange(choice)}
+              onClick = {() => handleChange(choice)}
             >
               <img alt={choice.name} src={choice.image} />
             </button>

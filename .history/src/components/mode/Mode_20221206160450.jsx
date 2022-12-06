@@ -21,7 +21,7 @@ export default function Mode() {
   };
 
   return (
-    <div className="flex justify-center w-screen ">
+    <div className="flex justify-center w-screen mt-8">
       <label className="block relative items-center text-center cursor-pointer">
         <input
           type="checkbox"

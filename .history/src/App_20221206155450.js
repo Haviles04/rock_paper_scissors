@@ -12,17 +12,17 @@ function App() {
   const playerChoice = useSelector((state)=> state.playerChoice.value);
   return (
     
+    playerChoice ? 
+    <div className="bg-gradient-radial from-mainBG1 to-mainBG2 w-screen h-screen flex flex-col justify-around"> 
+    <Results /> </div> :
     
     <div className="bg-gradient-radial from-mainBG1 to-mainBG2 w-screen h-screen flex flex-col justify-around"> 
-
       <Header />
-      {!playerChoice ? <Choices /> : <Results />}
+      <Choices />
       {showRules && <Rules />}
       <RulesButton />
       <Mode />  
-    
     </div>
-
   );
 }
 

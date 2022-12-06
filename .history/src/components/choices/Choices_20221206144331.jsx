@@ -17,18 +17,18 @@ export default function Choices() {
         {choices.map((choice) => (
           <div
             key={choice.id}
-            className={`col-start-${choice.col}  row-start-${
-              choice.row
-            } hover:scale-95 row m-5 ${
-              hardMode ? "w-[94px] h-[94px]" : "w-[114px] h-[114px]"
-            } rounded-full shadow-[0px_8px_${choice.shadow}]`}
+            className={
+              
+              `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5 ${ hardMode ? 'w-[94px] h-[94px]' : 'w-[114px] h-[114px]'} rounded-full shadow-[0px_8px_${choice.shadow}]` 
+              // `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5  rounded-full shadow-[0px_8px_${choice.shadow}]`
+            }
           >
             <button
-              className={`bg-gray-100 flex justify-center items-center ${
-                hardMode ? "w-[95px] h-[95px]" : "w-[115px] h-[115px]"
-              } p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${
-                choice.border
-              }]`}
+              className={
+                hardMode
+                  ? `bg-gray-100 flex justify-center items-center w-[95px] h-[95px] p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${choice.border}]`
+                  : `bg-gray-100 flex justify-center items-center w-[115px] h-[115px] p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${choice.border}]`
+              }
             >
               <img alt={choice.name} src={choice.image} />
             </button>

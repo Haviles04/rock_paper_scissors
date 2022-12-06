@@ -19,8 +19,8 @@ export default function Choices() {
             key={choice.id}
             className={
               hardMode ?
-              `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5 w-[94px] h-[94px] rounded-full shadow-[0px_8px_${choice.shadow}]` : 
-              `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`
+              `col-start-${choice.col}  row-start-${choice.row} row m-5 w-[94px] h-[94px] rounded-full shadow-[0px_8px_${choice.shadow}]` : 
+              `col-start-${choice.col}  row-start-${choice.row} row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`
             }
           >
             <button

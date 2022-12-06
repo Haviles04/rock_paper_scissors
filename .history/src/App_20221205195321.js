@@ -1,7 +1,6 @@
 import React from "react";
 import Choices from "./components/choices/Choices";
 import Mode from "./components/mode/Mode";
-import Score from "./components/Score/Score";
 
 function App() {
   return (

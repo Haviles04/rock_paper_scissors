@@ -19,14 +19,14 @@ export default function Choices() {
             key={choice.id}
             className={
               hardMode ?
-              `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5 w-[94px] h-[94px] rounded-full shadow-[0px_8px_${choice.shadow}]` : 
-              `col-start-${choice.col}  row-start-${choice.row} hover:scale-95 row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`
+              `col-start-${choice.col}  row-start-${choice.row} row m-5 w-[99px] h-[99px] rounded-full shadow-[0px_8px_${choice.shadow}]` : 
+              `col-start-${choice.col}  row-start-${choice.row} row m-5 w-[114px] h-[114px] rounded-full shadow-[0px_8px_${choice.shadow}]`
             }
           >
             <button
               className={
                 hardMode
-                  ? `bg-gray-100 flex justify-center items-center w-[95px] h-[95px] p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${choice.border}]`
+                  ? `bg-gray-100 flex justify-center items-center w-[90px] h-[90px] p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${choice.border}]`
                   : `bg-gray-100 flex justify-center items-center w-[115px] h-[115px] p-5 rounded-full shadow-btnInner border-solid border-[9px] border-[${choice.border}]`
               }
             >

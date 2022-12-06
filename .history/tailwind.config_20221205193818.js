@@ -16,10 +16,7 @@ module.exports = {
 
       },
       gridTemplateColumns:{
-        'fiveItem' : '40px 40px 40px 90px 40px 40px 40px'
-      },
-      gridTemplateRows: {
-        'test' : '90px 70px 50px 70px'
+        'test' : '20px 20px 20px 40px 20px 20px 20px'
       },
       boxShadow: {
         'btnInner': 'inset 0px 8px lightgrey'

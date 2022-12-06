@@ -54,8 +54,8 @@ export const choicesSlice = createSlice({
             id: 5,
             shadow: "#834fe3",
             border: "#8c5de5",
-            col: "3",
-            row: "4",
+            col: "2",
+            row: "5",
           },
           {
             name: "Spock",
@@ -64,8 +64,8 @@ export const choicesSlice = createSlice({
             id: 4,
             shadow: "#40b9ce",
             border: "#52bed1",
-            col: "2",
-            row: "2",
+            col: "1",
+            row: "3",
           },
         ]);
 
@@ -73,11 +73,11 @@ export const choicesSlice = createSlice({
           ...state,
           value: newState.map((item) => {
             if (item.name === "Rock") {
-              return { ...item, col: "5", row: "4" };
+              return { ...item, col: "4", row: "5" };
             } else if (item.name === "Paper") {
-              return { ...item, col: "6", row: "2" };
+              return { ...item, col: "5", row: "2" };
             } else if (item.name === "Scissors") {
-              return { ...item, col: "4", row: "1" };
+              return { ...item, col: "3", row: "2" };
             }
             return item;
           }),

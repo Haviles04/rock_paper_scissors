@@ -36,8 +36,8 @@ export default function Results() {
   };
 
   return (
-    <div className="flex text-center flex-col h-[300px] min-w-[370px] md:max-w-[500px] self-center">
-      <div className="flex flex-row justify-around">
+    <div className="flex text-center flex h-[300px] md:max-w-[500px] self-center">
+      <div className="flex  justify-around">
         {selections.map((selection, index) =>
           selection ? (
             <div

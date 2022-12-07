@@ -36,12 +36,12 @@ export default function Results() {
   };
 
   return (
-    <div className="flex text-center flex-col h-[300px] min-w-[370px] md:max-w-[500px] self-center">
+    <div className="flex text-center flex-col max-w-[500px] self-center ">
       <div className="flex flex-row justify-around">
         {selections.map((selection, index) =>
           selection ? (
             <div
-              key={selection.name}
+              key={selection.id}
               className={`
 w-[114px] h-[114px] text-center
 rounded-full shadow-[0px_8px_${selection.shadow}]`}
@@ -65,7 +65,7 @@ p-5 rounded-full shadow-btnInner mb-4 border-solid border-[9px] border-[${select
           )
         )}
       </div>
-      <div className="text-center mt-20 text-white h-[124px]">
+      <div className="text-center mt-20 text-white">
         {winner && (
           <div>
             <div className="text-4xl">{winner}</div>{" "}

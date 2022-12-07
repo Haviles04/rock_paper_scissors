@@ -20,12 +20,12 @@ export default function Rules() {
         </div>
         <div className="md:order-last md:w-full md:justify-self-center md:flex md:justify-center md:mt-[10%]">
           <img
-            className="mb-10 md:self-center md:h-[350px]"
+            className="md:self-center md:h-[350px]"
             alt="rules"
             src={hardMode ? hardModeRules : easyModeRules}
           />
         </div>
-        <div className=" md:mb-0 md:mr-11 md:flex md:justify-center">
+        <div className="mt-10 md:mb-0 md:mr-11 md:flex md:justify-center">
           <button onClick={() => dispatch(setShowRules(showRules))}>
             <img alt="close" src={iconClose} />{" "}
           </button>

@@ -15,17 +15,17 @@ export default function Rules() {
   return (
     <div className="absolute h-screen w-screen bg-white z-10 flex flex-col items-center justify-evenly text-center md:h-[500px] md:w-[500px] md:rounded-xl md:flex-row md:top-0 md:right-0 md:bottom-0 md:left-0 md:m-auto">
       <div className="md:flex md:flex-row md:flex-wrap md:w-full md:h:full md:justify-between  ">
-        <div className="">
+        <div className="mb-10">
           <span className=" text-3xl font-bold md:ml-11">Rules</span>
         </div>
         <div className="md:order-last md:w-full md:justify-self-center md:flex md:justify-center md:mt-[10%]">
           <img
-            className="mb-10 md:self-center md:h-[350px]"
+            className="md:self-center md:h-[350px]"
             alt="rules"
             src={hardMode ? hardModeRules : easyModeRules}
           />
         </div>
-        <div className=" md:mb-0 md:mr-11 md:flex md:justify-center">
+        <div className="mt-10 md:mr-11 md:flex md:justify-center">
           <button onClick={() => dispatch(setShowRules(showRules))}>
             <img alt="close" src={iconClose} />{" "}
           </button>

@@ -19,7 +19,7 @@ export default function Results() {
     compChoice && declareWinner();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [compChoice]);
+  }, [compChoice, dispatch]);
 
   const declareWinner = () => {
     if (playerChoice.beats.includes(compChoice.name)) {

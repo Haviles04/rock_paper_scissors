@@ -9,7 +9,9 @@ export default function Choices() {
   const dispatch = useDispatch();
 
   const getComputerChoice = () => {
-    const choiceIndex = Math.floor(Math.random() * choices.length);
+    const choiceIndex = hardMode
+      ? Math.floor(Math.random() * 5)
+      : Math.floor(Math.random() * 3);
     return choices[choiceIndex];
   };
 

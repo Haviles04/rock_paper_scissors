@@ -25,10 +25,10 @@ Users should be able to:
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 
-### Links
+### Links 
 
-- Solution URL: [Add solution URL here](https://fantastic-cranachan-254f7d.netlify.app/)
-- Live Site URL: [Add live site URL here](https://github.com/Haviles04/rock_paper_scissors)
+- Solution URL: [solution URL here](https://github.com/Haviles04/rock_paper_scissors)
+- Live Site URL: [live site URL here](https://fantastic-cranachan-254f7d.netlify.app/)
 
 ## My process
 
